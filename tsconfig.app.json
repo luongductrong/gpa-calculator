@@ -16,13 +16,19 @@
     "jsx": "react-jsx",
 
     /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-    /* Alias */
+    "strict": true, // bật strict type checking
+    "noUnusedLocals": true, // báo lỗi biến không dùng
+    "noUnusedParameters": true, // báo lỗi tham số không dùng
+    "erasableSyntaxOnly": true, // chỉ cho phép cú pháp có thể xóa
+    "noFallthroughCasesInSwitch": true, // báo lỗi fallthrough trong switch
+    "noUncheckedSideEffectImports": true, // báo lỗi import có side effect không được kiểm tra
+
+    "noImplicitAny": true, // cấm biến không khai báo type
+    "strictNullChecks": true, // bắt buộc check null/undefined
+    "strictFunctionTypes": true, // check tương thích hàm chặt chẽ
+    "strictBindCallApply": true, // check bind/call/apply đúng type
+    "noImplicitThis": true, // cấm "this" ngầm hiểu là any
+    "alwaysStrict": true, // parse code ở chế độ strict mode
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
