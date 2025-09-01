@@ -1,14 +1,18 @@
+import '@/app.css';
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-import './app.css';
+import reactLogo from '@/assets/react.svg';
+import { createFileRoute } from '@tanstack/react-router';
 
-function App() {
+export const Route = createFileRoute('/')({
+  component: HomePage,
+});
+
+function HomePage() {
   const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
+      <div className="flex justify-between px-20">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -27,5 +31,3 @@ function App() {
     </>
   );
 }
-
-export default App;
